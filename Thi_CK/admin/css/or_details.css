@@ -1,0 +1,61 @@
+        .order-summary {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .order-summary h3 {
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .order-summary p {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        .order-summary strong {
+            display: inline-block;
+            width: 140px;
+            font-weight: 600;
+            color: #555;
+        }
+        .status-Mới { background-color: #ffc107; color: #333; padding: 3px 8px; border-radius: 4px; font-weight: bold; }
+        .status-Đang-giao { background-color: #007bff; color: white; padding: 3px 8px; border-radius: 4px; font-weight: bold; }
+        .status-Đã-giao { background-color: #28a745; color: white; padding: 3px 8px; border-radius: 4px; font-weight: bold; }
+        .status-Đã-hủy { background-color: #dc3545; color: white; padding: 3px 8px; border-radius: 4px; font-weight: bold; }
+        
+        .order-details-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+        .order-details-table th, .order-details-table td {
+            padding: 12px 10px;
+            border: 1px solid #dee2e6;
+            vertical-align: middle;
+        }
+        .order-details-table th {
+            background-color: #f2f2f2;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+        .order-details-table td:nth-child(1) { width: 80px; text-align: center; } /* Cột ảnh */
+        .order-details-table td:nth-child(3), 
+        .order-details-table td:nth-child(4),
+        .order-details-table td:nth-child(5) {
+            text-align: center; 
+        }
+        .order-details-table tfoot td {
+            background-color: #f8f9fa;
+            border-top: 2px solid #007bff;
+        }
+        .product-image {
+            max-width: 50px;
+            height: auto;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }

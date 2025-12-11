@@ -1,0 +1,154 @@
+:root {
+    --primary-color: #F15A22; /* Cam Biti's */
+    --secondary-color: #00263e; /* Xanh Navy */
+    --text-color: #333;
+    --light-gray: #f5f5f5;
+    --border-color: #e1e1e1;
+    --font-main: 'Montserrat', sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-main); color: var(--text-color); background-color: #fff; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* --- UTILITIES --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+.btn-primary {
+    background: var(--primary-color); color: #fff;
+    padding: 10px 20px; border: none; border-radius: 4px;
+    cursor: pointer; font-weight: 600; text-transform: uppercase;
+}
+.btn-primary:hover { background: #d1400b; }
+
+/* --- TOP BAR --- */
+.top-bar { background: var(--secondary-color); color: #fff; text-align: center; padding: 5px 0; font-size: 13px; }
+
+/* --- HEADER & STICKY --- */
+header {
+    background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky; top: 0; z-index: 1000;
+}
+.header-inner { display: flex; justify-content: space-between; align-items: center; height: 80px; }
+.logo img { height: 50px; }
+
+/* Navigation */
+.main-menu { display: flex; gap: 30px; }
+.main-menu li { position: relative; }
+.main-menu a { font-weight: 600; text-transform: uppercase; font-size: 15px; }
+.main-menu a:hover { color: var(--primary-color); }
+
+/* Header Icons */
+.header-icons { display: flex; gap: 20px; font-size: 20px; }
+.cart-icon { position: relative; }
+.cart-count {
+    position: absolute; top: -8px; right: -8px;
+    background: var(--primary-color); color: #fff;
+    font-size: 10px; padding: 2px 6px; border-radius: 50%;
+}
+
+/* --- HERO BANNER --- */
+.hero-banner img { width: 100%; height: 500px; object-fit: cover; }
+
+/* --- LAYOUT GRID --- */
+.main-content { display: flex; margin-top: 40px; gap: 30px; }
+.sidebar { width: 250px; flex-shrink: 0; }
+.product-list { flex-grow: 1; }
+
+/* Filter Widget */
+.filter-widget { margin-bottom: 25px; border-bottom: 1px solid var(--border-color); padding-bottom: 15px; }
+.filter-widget h3 { font-size: 16px; margin-bottom: 15px; text-transform: uppercase; }
+.filter-item { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 14px; }
+
+/* --- PRODUCT CARD --- */
+.products-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+}
+.product-card {
+    border: 1px solid #eee; border-radius: 8px; overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; position: relative;
+}
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.product-img { position: relative; height: 250px; overflow: hidden; }
+.product-img img { width: 100%; height: 100%; object-fit: contain; }
+.discount-badge {
+    position: absolute; top: 10px; left: 10px;
+    background: var(--primary-color); color: #fff;
+    padding: 3px 8px; font-size: 12px; font-weight: bold; border-radius: 2px;
+}
+.product-info { padding: 15px; text-align: center; }
+.product-name { font-size: 16px; margin-bottom: 8px; font-weight: 500; height: 40px; overflow: hidden; }
+.product-price { color: var(--primary-color); font-weight: bold; font-size: 18px; }
+.old-price { text-decoration: line-through; color: #999; font-size: 14px; margin-left: 8px; }
+
+/* --- FOOTER --- */
+footer { background: #f8f8f8; padding: 50px 0 20px; margin-top: 60px; border-top: 1px solid #eee; }
+.footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
+.footer-col h4 { margin-bottom: 20px; font-size: 16px; text-transform: uppercase; }
+.footer-col ul li { margin-bottom: 10px; font-size: 14px; color: #666; }
+
+/* --- PAGINATION (PHÂN TRANG) --- */
+/* --- MODERN PAGINATION --- */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 20px;
+}
+
+.pagination {
+    display: flex;
+    gap: 8px; /* Khoảng cách giữa các nút */
+    background: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Đổ bóng nhẹ cho cả khung */
+}
+
+.page-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;  /* Chiều rộng cố định */
+    height: 40px; /* Chiều cao cố định */
+    border-radius: 50%; /* Bo tròn hoàn toàn */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà */
+    border: 1px solid transparent;
+}
+
+/* Hiệu ứng khi di chuột vào */
+.page-link:hover:not(.disabled):not(.active):not(.dots) {
+    background-color: #fff;
+    color: #F15A22; /* Màu cam */
+    border-color: #F15A22;
+    transform: translateY(-3px); /* Nổi lên nhẹ */
+    box-shadow: 0 4px 10px rgba(241, 90, 34, 0.2);
+}
+
+/* Trang đang chọn (Active) */
+.page-link.active {
+    background-color: #F15A22;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(241, 90, 34, 0.4);
+}
+
+/* Nút bị vô hiệu hóa (Disabled) */
+.page-link.disabled {
+    color: #ccc;
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+/* Dấu ba chấm (...) */
+.page-link.dots {
+    background: none;
+    width: auto;
+    cursor: default;
+    letter-spacing: 2px;
+}
+
