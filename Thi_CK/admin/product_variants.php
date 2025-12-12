@@ -1,5 +1,6 @@
 <?php
 require_once '../config.php';
+require_once 'auth_check.php';
 
 // Kiểm tra ID
 if (!isset($_GET['id'])) {

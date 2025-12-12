@@ -1,5 +1,6 @@
 <?php
 require_once '../config.php'; // Đảm bảo config.php đã dùng PDO
+require_once 'auth_check.php';
 
 // Xử lý khi bấm nút Lưu
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

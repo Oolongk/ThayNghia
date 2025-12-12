@@ -1,5 +1,6 @@
 <?php
 require_once '../config.php'; // Kết nối dạng PDO
+require_once 'auth_check.php';
 
 // Kiểm tra xem có ID được gửi lên không
 if (isset($_GET['id'])) {

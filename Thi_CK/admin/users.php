@@ -1,13 +1,14 @@
 <?php
 // 1. Kết nối Database (PDO)
 require_once '../config.php'; 
+require_once 'auth_check.php';
 
 // 2. Xử lý Xóa User
 if (isset($_GET['delete'])) {
     $delete_id = intval($_GET['delete']);
     
-    // Kiểm tra không cho xóa chính mình hoặc admin (nếu có logic role)
-    // Ở đây mình xóa khách hàng dựa trên ID
+      //Kiểm tra không cho xóa chính mình hoặc admin (nếu có logic role)
+      //Ở đây mình xóa khách hàng dựa trên ID
     if ($delete_id > 0) { 
         try {
             $sql = "DELETE FROM tbl_customers WHERE customer_id = :id";

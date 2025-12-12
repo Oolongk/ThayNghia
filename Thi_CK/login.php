@@ -23,22 +23,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->execute([':email' => $email]);
     
     // 3. Kiểm tra số dòng trả về
-    if ($stmt->rowCount() > 0) {
-        // 4. Lấy dữ liệu user
-        $row = $stmt->fetch(); // Tương đương mysqli_fetch_assoc
-        
-        // Kiểm tra mật khẩu (Giữ nguyên logic cũ)
-        if (password_verify($pass, $row['password'])) {
-            // Lưu session user
-            $_SESSION['user'] = $row;
-            header("Location: index.php");
-            exit();
+    // ... Đoạn trên giữ nguyên ...
+
+if ($stmt->rowCount() > 0) {
+    $row = $stmt->fetch();
+    
+    if (password_verify($pass, $row['password'])) {
+        // Lưu session
+        $_SESSION['user'] = $row; 
+
+        // --- SỬA ĐOẠN NÀY: KIỂM TRA QUYỀN ĐỂ CHUYỂN HƯỚNG ---
+        if ($row['role'] == 1) {
+            // Nếu là Admin -> Vào trang quản trị
+            header("Location: admin/index.php");
         } else {
-            $error = "Sai mật khẩu!";
+            // Nếu là Khách -> Về trang chủ
+            header("Location: index.php");
         }
+        exit();
+        // ----------------------------------------------------
+
     } else {
-        $error = "Email không tồn tại!";
+        $error = "Sai mật khẩu!";
     }
+}
 }
 ?>
 

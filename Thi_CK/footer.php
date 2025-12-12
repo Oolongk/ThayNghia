@@ -30,7 +30,7 @@
             </div>
         </div>
         <div style="text-align: center; margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px; font-size: 12px;">
-            © 2023 Sofm . All rights reserved.
+            © 2023 Oolong . All rights reserved.
         </div>
     </footer>
 </body>

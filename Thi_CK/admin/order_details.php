@@ -1,5 +1,6 @@
 <?php
 require_once '../config.php'; // Đã kết nối PDO
+require_once 'auth_check.php';
 
 if (!isset($_GET['id'])) {
     header("Location: orders.php");

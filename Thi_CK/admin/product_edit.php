@@ -1,5 +1,6 @@
 <?php
 require_once '../config.php'; // Kết nối PDO
+require_once 'auth_check.php';
 
 // 1. Lấy ID sản phẩm cần sửa
 if (isset($_GET['id'])) {

@@ -1,6 +1,7 @@
 <?php
 // Lưu ý: Đường dẫn ../config.php để lùi ra ngoài folder admin
 require_once '../config.php'; 
+require_once 'auth_check.php';
 
 // --- 1. CHUYỂN ĐỔI: LẤY THỐNG KÊ BẰNG PDO ---
 
