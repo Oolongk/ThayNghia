@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách các bài Lab (1-8)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: #fff;
+            width: 100%;
+            max-width: 800px;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        .header p { color: #7f8c8d; font-size: 16px; }
+
+        /* LƯỚI HIỂN THỊ 8 LAB */
+        .lab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); /* Tự động chia cột */
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .lab-item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 20px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            height: 120px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lab-item i {
+            font-size: 30px;
+            color: #3498db; /* Màu xanh icon */
+            margin-bottom: 10px;
+            transition: 0.3s;
+        }
+
+        .lab-item span {
+            font-weight: 700;
+            color: #555;
+            font-size: 18px;
+        }
+
+        /* Hiệu ứng khi di chuột vào ô Lab */
+        .lab-item:hover {
+            border-color: #3498db;
+            background: #ebf5fb;
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        .lab-item:hover i {
+            transform: scale(1.2);
+        }
+
+        /* Nút quay lại */
+        .footer-nav { text-align: center; }
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            background: #e74c3c; /* Màu đỏ */
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+        }
+        .btn-back:hover {
+            background: #c0392b;
+            transform: translateY(-2px);
+        }
+
+        /* Responsive cho điện thoại */
+        @media (max-width: 480px) {
+            .lab-grid { grid-template-columns: repeat(2, 1fr); } /* 2 cột trên mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Danh Sách Bài Thực Hành</h1>
+        </div>
+
+        <div class="lab-grid">
+            <a href="Lab1/lab01" class="lab-item">
+                <i class="fas fa-code"></i>
+                <span>Lab 1</span>
+            </a>
+
+            <a href="Lab2/lab02" class="lab-item">
+                <i class="fas fa-laptop-code"></i>
+                <span>Lab 2</span>
+            </a>
+
+            <a href="Lab3/lab03" class="lab-item">
+                <i class="fas fa-database"></i>
+                <span>Lab 3</span>
+            </a>
+
+            <a href="Lab4/lab04" class="lab-item">
+                <i class="fas fa-server"></i>
+                <span>Lab 4</span>
+            </a>
+
+            <a href="Lab5/lab05" class="lab-item">
+                <i class="fas fa-user-lock"></i>
+                <span>Lab 5</span>
+            </a>
+
+            <a href="Lab6/lab06" class="lab-item">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Lab 6</span>
+            </a>
+
+            <a href="Lab7/lab7" class="lab-item">
+                <i class="fas fa-bug"></i>
+                <span>Lab 7</span>
+            </a>
+
+            <a href="Lab8/lab08" class="lab-item">
+                <i class="fas fa-check-circle"></i>
+                <span>Lab 8</span>
+            </a>
+        </div>
+
+        <div class="footer-nav">
+            <a href="index.html" class="btn-back">
+                <i class="fas fa-arrow-left"></i> Quay lại
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
